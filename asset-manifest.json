@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/manoj-csr/static/css/main.882bc77e.chunk.css",
+    "main.js": "/manoj-csr/static/js/main.7e511beb.chunk.js",
+    "main.js.map": "/manoj-csr/static/js/main.7e511beb.chunk.js.map",
+    "runtime-main.js": "/manoj-csr/static/js/runtime-main.405a6feb.js",
+    "runtime-main.js.map": "/manoj-csr/static/js/runtime-main.405a6feb.js.map",
+    "static/js/2.8b3b31d1.chunk.js": "/manoj-csr/static/js/2.8b3b31d1.chunk.js",
+    "static/js/2.8b3b31d1.chunk.js.map": "/manoj-csr/static/js/2.8b3b31d1.chunk.js.map",
+    "static/js/3.5b8bb3fe.chunk.js": "/manoj-csr/static/js/3.5b8bb3fe.chunk.js",
+    "static/js/3.5b8bb3fe.chunk.js.map": "/manoj-csr/static/js/3.5b8bb3fe.chunk.js.map",
+    "index.html": "/manoj-csr/index.html",
+    "static/css/main.882bc77e.chunk.css.map": "/manoj-csr/static/css/main.882bc77e.chunk.css.map",
+    "static/js/2.8b3b31d1.chunk.js.LICENSE.txt": "/manoj-csr/static/js/2.8b3b31d1.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/manoj-csr/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.405a6feb.js",
+    "static/js/2.8b3b31d1.chunk.js",
+    "static/css/main.882bc77e.chunk.css",
+    "static/js/main.7e511beb.chunk.js"
+  ]
+}
