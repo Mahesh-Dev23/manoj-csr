@@ -2,10 +2,20 @@
   "name": "manoj-csr",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mahesh-dev23.github.io/manoj-csr",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.1",
+    "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
+    "jquery": "^3.6.0",
+    "json-server": "^0.16.3",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13",
+    "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -13,9 +23,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "nodemon --watch db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
