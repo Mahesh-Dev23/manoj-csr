@@ -1,16 +1,15 @@
-import React,{useState, useEffect, useReducer} from 'react'
+import React,{useState, useEffect, useReducer, useContext} from 'react'
 
-
-import submitData from '../Controller/submitData'
+import { getResponce } from '../../App'
 
 import Radio5 from './Radio5'
 
 export const Radio2Value = React.createContext()
 
 function Loyalty({data}) {
-
+    const captureQue2Values = useContext(getResponce)
     const [radioArray, setRadioArray] = useState([])
-    console.log( radioArray )
+    //console.log( radioArray )
 
     const reducer = (state, action)=>{
         switch(action.type){
@@ -24,12 +23,10 @@ function Loyalty({data}) {
     // user reducer 
     const [newState, dispatch] = useReducer( reducer, radioArray)
 
-
-    // const radioClicked = (n, d) => {
-    //     dispatch({type:'main', value:d, name:n})
-    // }
-
-    console.log(newState)
+    const nextPrev = () =>{
+        captureQue2Values.countDispatch({type:'que2', value:newState})
+    }
+    // console.log(newState)
     return (
         <div className="section" id="loyalty" >
             <div className="panel panel-default">
@@ -42,22 +39,9 @@ function Loyalty({data}) {
                         </div>
                         <form  >
                             <Radio2Value.Provider value={{countState: newState, countDispatch: dispatch}}>< Radio5 data={data} /></Radio2Value.Provider>                             
-                            {/* {data.q.map(res => 
-                                <div className="radioInline" id={res.A} key={res.A}>
-                                    <div className="num">{res.A}</div>
-                                    <div className="dis">{res.d}</div>
-                                    <div className="selectPanel">{data.des4.map(des => 
-                                        <label for={res.A} >
-                                            <input type="radio" id={res.A + des} name={res.A} value={des} onClick={ ()=> radioClicked(`${res.A}`,`${des}`)}/>{des}
-                                        </label>)}
-                                    </div>
-                                </div>
-                            )} */}
-                                    
-                                
-                            
-                            <button type="submit" className="btn btn-primary" onClick={() => submitData("loyalty")}>Next</button>
-                        </form>
+                        </form>    
+                            <button type="submit" className="btn btn-primary" onClick={() => nextPrev()}>Next</button>
+                        
                     </div>
                 </div>
             

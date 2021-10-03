@@ -1,13 +1,17 @@
-import React, {useState, useReducer} from 'react'
+import React, {useState, useReducer, useContext} from 'react'
 
 import Data from '../../data.json'
 
 import Radio5 from './Radio5'
 
+import { getResponce } from '../../App'
+
 export const Radio5Value = React.createContext()
 export const Radio5bValue = React.createContext()
 
 export default function Leadership() {
+    const captureQue5aValues = useContext(getResponce)
+    const captureQue5bValues = useContext(getResponce)
 
     const [radio5Array, setRadio5Array] = useState([])
     const [radio5bArray, setRadio5bArray] = useState([])
@@ -35,8 +39,13 @@ export default function Leadership() {
     // user reducer 
     const [newState5, dispatch] = useReducer( reducer, radio5Array)
     const [newState5b, dispatch2] = useReducer( reducer2, radio5bArray)
-    console.log(newState5)
-    console.log(newState5b)
+    //console.log(newState5)
+    //console.log(newState5b)
+
+    const nextPrev = () =>{
+        captureQue5aValues.countDispatch({type:'que5a', value:newState5})
+        captureQue5bValues.countDispatch({type:'que5b', value:newState5b})
+    }
 
     return (
         <div className="section" id="leadership" >
@@ -54,6 +63,7 @@ export default function Leadership() {
                         <h4>{Data.que5b.des5}</h4>
                         <Radio5bValue.Provider value={{countState2: newState5b, countDispatch2: dispatch2}}><Radio5 data={Data.que5b} id={"leadership2"} /></Radio5bValue.Provider>
                     </div>
+                    <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>
             </div>
             
         </div>

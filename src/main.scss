@@ -11,6 +11,9 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Roboto", sans-serif;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 .container-fluid {
 	padding: 0;
@@ -30,14 +33,48 @@ h3 {
 }
 .section {
 	width: 100vw;
+	height: 100vh;
 	min-height: 100vh;
 	padding: 12vh 15vw;
+	overflow-y: scroll;
+}
+.menubar {
+	background: rgba($darkgray, 90%);
+	height: 50px;
+	width: 350px;
+	position: fixed;
+	bottom: 0;
+	margin-left: 50%;
+	margin-bottom: 0;
+	transform: translateX(-50%);
+
+	display: "flex";
+	justify-content: space-around;
+
+	li .li {
+		color: $white;
+		list-style: none;
+		text-transform: none;
+		width: 40px;
+		height: 40px;
+		padding: 8px;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 25px;
+		background: $clickable;
+		margin-top: 10px;
+		cursor: pointer;
+	}
 }
 .btn {
 	min-width: 120px;
 	border-radius: 0;
-
 	margin-right: 0;
+}
+.btn-primary {
+	background: $clickable;
+}
+.next {
 }
 label {
 	font-weight: 300;
@@ -52,12 +89,16 @@ label {
 	color: $darkblue;
 }
 .panel-body {
+	height: 70vh;
+	overflow-y: scroll;
 	text-align: left;
 	color: $darkgray;
+	padding-bottom: 50px;
 	h4 {
 		color: $hover;
 		font-size: 16px;
 		text-align: center;
+		margin-top: 20px;
 		margin-bottom: 0;
 		padding: 10px;
 		background: rgba($gray, 20%);
@@ -110,11 +151,11 @@ label {
 }
 
 #demographic {
-	background: rgba(#d8bfd8, 30%);
+	background: rgba(#d8bfd8, 30%) url("./q1.png") no-repeat right bottom;
 }
 
 #loyalty {
-	background: rgba(#663399, 20%);
+	background: rgba(#663399, 20%) url("./q2.png") no-repeat right bottom;
 	h4,
 	.num {
 		color: rgba(#663399, 60%);
@@ -122,23 +163,23 @@ label {
 }
 
 #roi {
-	background: rgba(#66cdaa, 20%);
+	background: rgba(#66cdaa, 20%) url("./q3.png") no-repeat right bottom;
 	h4,
 	.num {
-		color: #66cdaa;
+		color: MediumSeaGreen;
 	}
 }
 
 #motivational {
-	background: rgba(#e9967a, 20%);
+	background: rgba(#e9967a, 20%) url("./q4.png") no-repeat right bottom;
 	h4,
 	.num {
-		color: #e9967a;
+		color: Tomato;
 	}
 }
 
 #leadership {
-	background: rgba(#7b68ee, 20%);
+	background: rgba(#7b68ee, 20%) url("./q5.png") no-repeat right bottom;
 	h4,
 	.num {
 		color: #7b68ee;
@@ -146,11 +187,33 @@ label {
 }
 
 #govt {
-	background: rgba(#bdb76b, 30%);
+	background: rgba(#bdb76b, 30%) url("./q6.png") no-repeat right bottom;
 }
 
 #prefer {
-	background: rgba(#556b2f, 20%);
+	background: rgba(#556b2f, 20%) url("./q7.png") no-repeat right bottom;
+}
+
+#thanks {
+	background: tomato;
+	text-align: center;
+	color: $white;
+	h3,
+	p {
+		margin: 10px 0;
+	}
+}
+.slideUp {
+	animation-name: up;
+	animation-duration: 4s;
+}
+@keyframes up {
+	from {
+		margin-top: 0;
+	}
+	to {
+		margin-top: -100vh;
+	}
 }
 .slot1 {
 	width: 30%;

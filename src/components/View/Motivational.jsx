@@ -3,12 +3,16 @@ import React,{useState, useReducer, useContext} from 'react'
 import data from '../../data.json'
 
 import Radio5 from './Radio5'
+import { getResponce } from '../../App'
 
 export const Radio4AValue = React.createContext()
 export const Radio4BValue = React.createContext()
 export const Radio4CValue = React.createContext()
 
 export default function Motivational() {
+    const captureQue4aValues = useContext(getResponce)
+    const captureQue4bValues = useContext(getResponce)
+    const captureQue4cValues = useContext(getResponce)
 
     const [radio4A, setradio4A] = useState([])
     const [radio4B, setradio4B] = useState([])
@@ -35,9 +39,16 @@ export default function Motivational() {
         
     const radioClicked2 = (n, d) =>  dispatchC({type:'c', value:d, name: n})
 
-    console.log(state4A)
-    console.log(state4B)
-    console.log(state4C)
+    //console.log(state4A)
+    //console.log(state4B)
+    //console.log(state4C)
+
+    const nextPrev = () =>{
+        captureQue4aValues.countDispatch({type:'que4a', value:state4A})
+        captureQue4bValues.countDispatch({type:'que4b', value:state4B})
+        captureQue4cValues.countDispatch({type:'que4c', value:state4C})
+    }
+
     return (
         <div className="section" id="motivational" >
             <div className="panel panel-default">
@@ -69,31 +80,18 @@ export default function Motivational() {
                                     <div className="num">{res.A}</div>
                                     <div className="dis">{res.d}</div>
                                 </div>
-                                {res.opt.map(res => 
-                                <div className={res.slot} >
+                                {res.opt.map(resp => 
+                                <div className={resp.slot} >
                                     <label for={res.A} >
-                                        <input type="radio" id={res.slot} name={res.A} value={res.span} onClick={ ()=> radioClicked2(`${res.A}`,`${res.span}`)}/>
-                                        {res.span}
+                                        <input type="radio" id={resp.slot} name={res.A} value={resp.span} onClick={ ()=> radioClicked2(`${res.A}`,`${resp.span}`)}/>
+                                        {resp.span}
                                     </label>    
-                                    <span>{res.opt}</span>
-                                    {/* <div className="num">{}</div> */}
-                                   
-                                        {/* <div className={`selectPanel2 ${res.slot}`}> {res.span.map(des => 
-                                            <label for={res.A} >
-                                                <input type="radio" id={res.A + des} name={res.A} value={des} onClick={ ()=> radioClicked2(`${res.A}`,`${des}`)}/>
-                                                {des}
-                                                
-                                            </label>
-                                            
-                                        
-                                        )}
-                                        <span>{res.opt.map( opt => opt)}</span>
-                                        </div> */}
-                                        
+                                    <span>{resp.opt}</span>
                                     
                                 </div>)}
                             </div>
                         )}
+                        <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>
                     </div>
             </div>
             

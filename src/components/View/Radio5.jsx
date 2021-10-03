@@ -16,7 +16,7 @@ function Radio5({data}) {
     const captureRadio5bValues = useContext(Radio5bValue)
     const captureRadio7Values = useContext(Radio7Value)
     const sec = data.sec
-    console.log(sec)
+    //console.log(sec)
     const radioClicked = (n, d) => {
         if(sec.startsWith("Q.2") ){
             captureRadioValues.countDispatch({type:'main', value:d, name: n})

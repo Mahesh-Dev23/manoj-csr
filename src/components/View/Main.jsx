@@ -10,12 +10,13 @@ import PreferToStay from './PreferToStay'
 import Leadership from './Leadership'
 import Govt from './Govt'
 import Motivational from './Motivational'
+import Menu from './Menu'
 
 
 
 function Main() {
     return (
-        <div>
+        <div id="main">
             <div id="top">
                 <h3>Welcome to Corporate Social Responsibility - Survey</h3>
                 {/* <h4>Thank you for participating in this survey.</h4> */}
@@ -29,6 +30,7 @@ function Main() {
                 <Leadership />
                 <Govt />
                 <PreferToStay />
+                < Menu />
             </div>
 
         </div>

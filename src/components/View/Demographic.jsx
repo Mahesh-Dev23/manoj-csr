@@ -1,11 +1,11 @@
-import React,{useState, useReducer, useEffect} from 'react'
+import React,{useState, useReducer, useEffect, useContext} from 'react'
 import axios from 'axios'
 
-
+import { getResponce } from '../../App'
 import data from '../../data.json'
-import postData from '../Controller/post'
 
 function Demographic() {
+    const captureQue1Values = useContext(getResponce)
     const [user, setUser] = useState()
     let userLength 
     const reducer = (state, action)=>{
@@ -25,18 +25,13 @@ function Demographic() {
 
     const radioClicked = (n, d) => {
         dispatch({type:'demo', value:d, name: n})
-        
-       if(userNew){
-            userLength = Object.keys(userNew).length
-            const dataLength = data.que1.q.length + 2
-            postData(userNew, dataLength)
-        }
     }
     
     const nextPrev = () =>{
-
+        captureQue1Values.countDispatch({type:'que1', value:userNew})
     }
-    console.log(data.que1.q.length+2 + " " + userLength)
+
+    //console.log(userNew)
     
     return (
         <div className="section" id="demographic" >
@@ -60,8 +55,12 @@ function Demographic() {
                                         <div className="radioInline">
                                             {res.des.map(desc => 
                                             <label for={desc} >
-                                                <input type="radio" id={res.label} name={res.label} value={desc} onClick={ ()=> radioClicked(`${res.name}`,`${desc}`)}/>{desc}
+                                                <input type="radio" id={res.label} name={res.name} value={desc} onClick={ ()=> radioClicked(`${res.name}`,`${desc}`)}/>{desc}
                                             </label>)}
+                                            {res.name === "religion" ? <label for={res.name} >Others please specify <input type="text" id={res.label} name={res.name}  onChange={ e => radioClicked(`${res.name}`,`${e.target.value}`)}/></label> :
+                                            res.name === "education" ? <label for={res.name} >Professional Course (CA/ CS/ CMA etc.) please specify <input type="text" id={res.label} name={res.name}  onChange={ e => radioClicked(`${res.name}`,`${e.target.value}`)}/></label> :
+                                            res.name === "industry" ? <label for={res.name} >Other industry please specify <input type="text" id={res.label} name={res.name}  onChange={ e => radioClicked(`${res.name}`,`${e.target.value}`)}/></label> :
+                                            '' }
                                         </div>   
                                 </div>
                             )}
@@ -69,7 +68,7 @@ function Demographic() {
                             
                             
                         </form>
-                        <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>
+                        <button className="btn btn-primary next" onClick={()=>nextPrev()}>Next</button>
                     </div>
                 </div>
             

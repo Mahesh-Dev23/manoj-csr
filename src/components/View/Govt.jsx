@@ -1,9 +1,11 @@
-import React, {useState, useReducer} from 'react'
+import React, {useState, useReducer, useContext} from 'react'
 
 import data from '../../data.json'
+import { getResponce } from '../../App'
 
 export default function Govt() {
-    const [radio4, setRadio4] = useState()
+    const captureQue6Values = useContext(getResponce)
+    const [radio6, setRadio6] = useState()
 
     const reducer = (state, action)=>{
         switch(action.type){
@@ -14,12 +16,17 @@ export default function Govt() {
         }
     }
 
-    const [state4, dispatch] = useReducer(reducer, radio4)
+    const [state6, dispatch] = useReducer(reducer, radio6)
 
     const radioClicked = (n, d) => {
         dispatch({type:'govt', value:d, name: n})
     }
-    console.log(state4)
+    //console.log(state4)
+
+    const nextPrev = () =>{
+        captureQue6Values.countDispatch({type:'que6', value:state6})
+    }
+
     return (
         <div className="section" id="govt" >
             <div className="panel panel-default">
@@ -40,7 +47,9 @@ export default function Govt() {
                                 </div>
                             </div>
                         )}
+                        <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>    
                     </div>
+                    
             </div>
             
             

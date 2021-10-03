@@ -1,9 +1,10 @@
-import React, {useState, useReducer} from 'react'
+import React, {useState, useReducer, useContext} from 'react'
 
 import Data from '../../data.json'
 
 import Radio5 from './Radio5'
 import Scale5 from './scale5'
+import { getResponce } from '../../App'
 
 export const Radio3AValue = React.createContext()
 export const Radio3BValue = React.createContext()
@@ -11,6 +12,11 @@ export const Radio3CValue = React.createContext()
 export const Radio3DValue = React.createContext()
 
 function ROI() {
+    const captureQue3aValues = useContext(getResponce)
+    const captureQue3bValues = useContext(getResponce)
+    const captureQue3cValues = useContext(getResponce)
+    const captureQue3dValues = useContext(getResponce)
+
     const [radio3A, setradio3A] = useState([])
     const [radio3B, setradio3B] = useState([])
     const [radio3C, setradio3C] = useState([])
@@ -36,10 +42,18 @@ function ROI() {
     const [state3B, dispatchB ] = useReducer(reducer, radio3B)
     const [state3C, dispatchC ] = useReducer(reducer, radio3C)
     const [state3D, dispatch ] = useReducer(reducer, radio3D)
-    console.log(state3A)
-    console.log(state3B)
-    console.log(state3D)
-    console.log(state3C)
+    //console.log(state3A)
+    //console.log(state3B)
+    //console.log(state3D)
+    //console.log(state3C)
+
+    const nextPrev = () =>{
+        captureQue3aValues.countDispatch({type:'que3a', value:state3A})
+        captureQue3bValues.countDispatch({type:'que3b', value:state3B})
+        captureQue3cValues.countDispatch({type:'que3c', value:state3C})
+        captureQue3dValues.countDispatch({type:'que3d', value:state3D})
+    }
+
     return (
         <div className="section" id="roi" >
             <div className="panel panel-default">
@@ -62,6 +76,7 @@ function ROI() {
                             <div className="selectPanel">{Data.que3d.des3}</div>   
                         </div>
                         <Radio3DValue.Provider value={{countState: state3D, countDispatch: dispatch}}><Radio5 data={Data.que3d} id={"roi4"} /></Radio3DValue.Provider>
+                        <button className="btn btn-primary" onClick={()=>nextPrev()}>Next</button>
                     </div>
             </div>
         </div>
