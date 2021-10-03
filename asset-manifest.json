@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/manoj-csr/static/css/main.882bc77e.chunk.css",
-    "main.js": "/manoj-csr/static/js/main.7e511beb.chunk.js",
-    "main.js.map": "/manoj-csr/static/js/main.7e511beb.chunk.js.map",
-    "runtime-main.js": "/manoj-csr/static/js/runtime-main.405a6feb.js",
-    "runtime-main.js.map": "/manoj-csr/static/js/runtime-main.405a6feb.js.map",
-    "static/js/2.8b3b31d1.chunk.js": "/manoj-csr/static/js/2.8b3b31d1.chunk.js",
-    "static/js/2.8b3b31d1.chunk.js.map": "/manoj-csr/static/js/2.8b3b31d1.chunk.js.map",
-    "static/js/3.5b8bb3fe.chunk.js": "/manoj-csr/static/js/3.5b8bb3fe.chunk.js",
-    "static/js/3.5b8bb3fe.chunk.js.map": "/manoj-csr/static/js/3.5b8bb3fe.chunk.js.map",
+    "main.css": "/manoj-csr/static/css/main.1921b358.chunk.css",
+    "main.js": "/manoj-csr/static/js/main.71ea20a4.chunk.js",
+    "main.js.map": "/manoj-csr/static/js/main.71ea20a4.chunk.js.map",
+    "runtime-main.js": "/manoj-csr/static/js/runtime-main.d0ddfb85.js",
+    "runtime-main.js.map": "/manoj-csr/static/js/runtime-main.d0ddfb85.js.map",
+    "static/js/2.aa756e09.chunk.js": "/manoj-csr/static/js/2.aa756e09.chunk.js",
+    "static/js/2.aa756e09.chunk.js.map": "/manoj-csr/static/js/2.aa756e09.chunk.js.map",
+    "static/js/3.c0ef726b.chunk.js": "/manoj-csr/static/js/3.c0ef726b.chunk.js",
+    "static/js/3.c0ef726b.chunk.js.map": "/manoj-csr/static/js/3.c0ef726b.chunk.js.map",
     "index.html": "/manoj-csr/index.html",
-    "static/css/main.882bc77e.chunk.css.map": "/manoj-csr/static/css/main.882bc77e.chunk.css.map",
-    "static/js/2.8b3b31d1.chunk.js.LICENSE.txt": "/manoj-csr/static/js/2.8b3b31d1.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/manoj-csr/static/media/logo.6ce24c58.svg"
+    "static/css/main.1921b358.chunk.css.map": "/manoj-csr/static/css/main.1921b358.chunk.css.map",
+    "static/js/2.aa756e09.chunk.js.LICENSE.txt": "/manoj-csr/static/js/2.aa756e09.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/manoj-csr/static/media/logo.6ce24c58.svg",
+    "static/media/main.scss": "/manoj-csr/static/media/q7.451045a2.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.405a6feb.js",
-    "static/js/2.8b3b31d1.chunk.js",
-    "static/css/main.882bc77e.chunk.css",
-    "static/js/main.7e511beb.chunk.js"
+    "static/js/runtime-main.d0ddfb85.js",
+    "static/js/2.aa756e09.chunk.js",
+    "static/css/main.1921b358.chunk.css",
+    "static/js/main.71ea20a4.chunk.js"
   ]
 }
