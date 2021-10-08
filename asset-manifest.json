@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/manoj-csr/static/css/main.ac6af755.chunk.css",
-    "main.js": "/manoj-csr/static/js/main.5bcc1b7d.chunk.js",
-    "main.js.map": "/manoj-csr/static/js/main.5bcc1b7d.chunk.js.map",
+    "main.css": "/manoj-csr/static/css/main.0a96dd3f.chunk.css",
+    "main.js": "/manoj-csr/static/js/main.31b9e39d.chunk.js",
+    "main.js.map": "/manoj-csr/static/js/main.31b9e39d.chunk.js.map",
     "runtime-main.js": "/manoj-csr/static/js/runtime-main.d0ddfb85.js",
     "runtime-main.js.map": "/manoj-csr/static/js/runtime-main.d0ddfb85.js.map",
     "static/js/2.cc47df83.chunk.js": "/manoj-csr/static/js/2.cc47df83.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c0ef726b.chunk.js": "/manoj-csr/static/js/3.c0ef726b.chunk.js",
     "static/js/3.c0ef726b.chunk.js.map": "/manoj-csr/static/js/3.c0ef726b.chunk.js.map",
     "index.html": "/manoj-csr/index.html",
-    "static/css/main.ac6af755.chunk.css.map": "/manoj-csr/static/css/main.ac6af755.chunk.css.map",
+    "static/css/main.0a96dd3f.chunk.css.map": "/manoj-csr/static/css/main.0a96dd3f.chunk.css.map",
     "static/js/2.cc47df83.chunk.js.LICENSE.txt": "/manoj-csr/static/js/2.cc47df83.chunk.js.LICENSE.txt",
     "static/media/manoj.0acd41b5.png": "/manoj-csr/static/media/manoj.0acd41b5.png",
     "static/media/main.scss": "/manoj-csr/static/media/q7.451045a2.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.d0ddfb85.js",
     "static/js/2.cc47df83.chunk.js",
-    "static/css/main.ac6af755.chunk.css",
-    "static/js/main.5bcc1b7d.chunk.js"
+    "static/css/main.0a96dd3f.chunk.css",
+    "static/js/main.31b9e39d.chunk.js"
   ]
 }
